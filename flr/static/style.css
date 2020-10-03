@@ -1,0 +1,154 @@
+* {
+	font-family: Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+#navbar-logo {
+	position: relative;
+	width: 150px;
+}
+
+.navbar-nav {
+	margin-left: 20px;
+}
+
+.showcase-container {
+	margin-top: 50px;
+	
+}
+
+.showcase-container img {
+	width: 100%;
+	height: 100%;
+}
+
+.text-top-left {
+	width: 25%;
+	position: absolute;
+	top: 100px;
+	left: 200px;
+}
+
+.showcase-slogan {
+	font-size: 80px;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	line-height: 0.8em;
+}
+
+.showcase-desc {
+	margin-top: 20px;
+	line-height: 1.2em;
+	color: #fff;
+	font-family: cambria;
+	font-size: 20px;
+}
+
+.update-container {
+	margin-top: -300px;
+}
+
+.update-section {
+	position: absolute;
+	left: 800px;
+	right: 200px;
+	width: 700px,
+	height: 400px;
+	background-color: #fff;
+	padding: 30px;
+}
+
+.update-section a {
+	text-decoration: none;
+	color: #000;
+}
+
+.update-heading, .sgc-content h1, .objective-container h1, .partnership-content h1 {
+	text-decoration: none;
+	font-size: 50px;
+	font-weight: bold;
+	color: #7bb18d;
+}
+
+.update-title {
+	font-weight: bold;
+	text-decoration-line: underline;
+	color: #636e72;
+}
+
+.update-title:hover {
+	color: #000;
+}
+
+.update-date {
+	color: #808080;
+}
+
+.update-content, .sgc-content p, .objective-container li, .partnership-content p {
+	font-family: cambria;
+	font-size: 20px;
+	line-height: 1.2em;
+}
+
+.sgc-container {
+	position: relative;
+	margin-top: 800px;
+}
+
+.sgc-content {
+	top: 100px;
+	right: 200px;
+	left: 700px;
+	/*width: 500;
+	height: 200;*/
+	position: absolute;
+}
+
+#citation {
+	font-size: 11px;
+	color: #bebebe;
+}
+
+.objective-content {
+	left: 200px;
+	right: 700px;
+	/*width: 500;
+	height: 200;*/
+	position: absolute;
+	margin-top: 100px;
+}
+
+.objective-img {
+	float: right;
+}
+
+.partnership-img {
+	margin-top: 700px;
+	float: left;
+}
+
+.partnership-content {
+	margin-top: 800px;
+	position: absolute;
+	right: 200px;
+	left: 700px;
+	/*width: 500px;
+	height: 200px;*/
+	float: right;
+}
+
+#img-logo-rec img {
+	margin: 0 5px;
+}
+
+.img-logo-square img {
+	margin: 0 15px;
+}
+
+.page-footer {
+
+}
