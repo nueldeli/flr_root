@@ -17,6 +17,12 @@ class Post(models.Model):
 	date_created = models.DateTimeField(auto_now_add=True)
 	content = models.TextField(blank=True)
 	date_updated = models.DateTimeField(auto_now=True)
+	main_img = models.ImageField(null=True, blank=True)
+	caption_main_img = models.CharField(max_length=250, null=True, blank=True)
+	first_body_img = models.ImageField(null=True, blank=True)
+	caption_first_img = models.CharField(max_length=250, null=True, blank=True)
+	second_body_img = models.ImageField(null=True, blank=True)
+	caption_second_img = models.CharField(max_length=250, null=True, blank=True)
 
 	status = models.CharField(max_length=10, choices = STATUS_CHOICES, default='draft')
 
