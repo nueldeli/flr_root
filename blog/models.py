@@ -17,7 +17,7 @@ class Post(models.Model):
 	date_created = models.DateTimeField(auto_now_add=True)
 	content = models.TextField(blank=True)
 	date_updated = models.DateTimeField(auto_now=True)
-	main_img = models.ImageField(null=True, blank=True)
+	main_img = models.ImageField(null=True, blank=True, upload_to='images/')
 	caption_main_img = models.CharField(max_length=250, null=True, blank=True)
 	first_body_img = models.ImageField(null=True, blank=True)
 	caption_first_img = models.CharField(max_length=250, null=True, blank=True)
@@ -31,6 +31,7 @@ class Post(models.Model):
 
 	def __str__(self):
 		return self.title + " | " + str(self.author)
+
 
 #This function runs when a signal calls it (For slugify-ing the slug)
 def slug_generator(sender, instance, *args, **kwargs):

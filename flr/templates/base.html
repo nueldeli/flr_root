@@ -19,34 +19,34 @@
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<!-- logo asal -->
-		<a class="navbar-brand" id="navbar-name" href="home.html"><img id="navbar-logo" src="{% static 'img/flr_logo_day.png' %}"></a>
+		<a class="navbar-brand" id="navbar-name" href="{% url 'home' %}"><img id="navbar-logo" src="{% static 'img/flr_logo_day.png' %}"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="about.html">About</a>
+					<a class="nav-link" href="{% url 'about' %}">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="organization.html">Organization</a>
+					<a class="nav-link" href="{% url 'organization' %}">Organization</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="blog.html">Blog</a>
+					<a class="nav-link" href="{% url 'home' %}">Blog</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="data.html">Data</a>
+					<a class="nav-link" href="{% url 'home' %}">Data</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="planting.html">Planting</a>
+					<a class="nav-link" href="{% url 'home' %}">Planting</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Sign in</a>
+					<a class="nav-link" href="{% url 'home' %}">Login</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Sign Up</a>
+					<a class="nav-link" href="{% url 'home' %}">Sign Up</a>
 				</li>
 			</ul>
 		</div>
@@ -77,7 +77,7 @@
 	        <ul class="list-unstyled">
 	          <img src="{% static 'img/flr_logo_day.png' %}" width="200">
 	          <br>
-	          <h6>FOREST DEPARTMENT SARAWAK</h6>
+	          <h6><a class="link-unstyled" href=""> FOREST DEPARTMENT SARAWAK</a></h6>
 	          <p>Forest Department Sarawak Headquarters<br>Level 11-15, Bangunan Baitulmakmur II, Petra Jaya, 93050 Kuching, Sarawak</p>
 	        </ul>
 
@@ -111,37 +111,37 @@
 
 	        <ul class="list-unstyled">
 	          <li>
-	            <a href="#!">Reforestation & Industrial Forest Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3520#" target="_blank">Reforestation & Industrial Forest Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Planning & Management Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3521" target="_blank">Planning & Management Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">International Affairs Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3523" target="_blank">International Affairs Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Research Development & Innovation Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3524" target="_blank">Research Development & Innovation Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Management Services Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3524" target="_blank">Management Services Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Revenue & Data Management Division</a>
+	            <a href="#!" target="_blank">Revenue & Data Management Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Organizational Development & Project Development Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3525" target="_blank">Organizational Development & Project Development Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Forest Technology & Geospatial</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3539" target="_blank">Forest Technology & Geospatial</a>
 	          </li>
 	          <li>
-	            <a href="#!">Licensing Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3534" target="_blank">Licensing Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Social Forestry Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3535" target="_blank">Social Forestry Division</a>
 	          </li>
 	          <li>
-	            <a href="#!">Conservation & Constitution Division</a>
+	            <a href="https://forestry.sarawak.gov.my/modules/web/pages.php?mod=staffcontact&sub=agency&site=15&staff_name=&loc=3538" target="_blank">Conservation & Constitution Division</a>
 	          </li>
 	        </ul>
 
