@@ -27,14 +27,14 @@ class Post(models.Model):
 
 	status = models.CharField(max_length=10, choices = STATUS_CHOICES, default='draft')
 
-	class Meta:
-		ordering = ('-date_created',)
+	#class Meta:
+		#ordering = ('-date_created',)
 
 	def __str__(self):
 		return self.title + " | " + str(self.author)
 
 	def get_absolute_url(self):
-		return reverse('home')
+		return reverse('blog')
 
 
 #This function runs when a signal calls it (For slugify-ing the slug)

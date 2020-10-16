@@ -11,8 +11,9 @@
 				<h2 class="font-weight-bold text-center">{{ post.title }}</h2>
 				<div class="text-center">
 					<a href="{% url 'update_post' post.pk %}">Edit</a>
+					<a href="{% url 'delete_post' post.pk %}">Delete</a>
 				</div>
-				
+
 				<p class="text-muted text-center">{{ post.author }}<br>{{ post.date_created }}</p>
 				<hr>
 				<figure class="figure">

@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .forms import AddPostForm, UpdatePostForm
+from django.urls import reverse_lazy
 
 
 #def all_posts(request):
@@ -11,6 +12,7 @@ from .forms import AddPostForm, UpdatePostForm
 class BlogView(ListView):
 	model = Post
 	template_name = 'blog/blog.html'
+	ordering = ['-date_created']
 
 class BlogPostView(DetailView):
 	model = Post
@@ -25,3 +27,9 @@ class UpdatePostView(UpdateView):
 	model = Post
 	form_class = UpdatePostForm
 	template_name = 'blog/update_post.html'
+
+class DeletePostView(DeleteView):
+	model = Post
+	template_name = 'blog/delete_post.html'
+	success_url = reverse_lazy('blog')
+
