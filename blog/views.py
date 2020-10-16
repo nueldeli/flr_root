@@ -1,16 +1,27 @@
-"""from django.views import generic
-from .models import Post
-
-class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
-
-class PostDetail(generic.DetailView):
-    model = Post
-    template_name = 'post_detail.html'"""
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post
+from .forms import AddPostForm, UpdatePostForm
 
-def all_posts(request):
-	post_list = Post.objects.filter(status='published').order_by('-date_created')
-	return render(request, 'blog/index.html', {'post_list':post_list})
+
+#def all_posts(request):
+	#post_list = Post.objects.filter(status='published').order_by('-date_created')
+	#return render(request, 'blog/blog.html', {'post_list':post_list})
+
+class BlogView(ListView):
+	model = Post
+	template_name = 'blog/blog.html'
+
+class BlogPostView(DetailView):
+	model = Post
+	template_name = 'blog/blog_post.html'
+
+class AddPostView(CreateView):
+	model = Post
+	form_class = AddPostForm
+	template_name = 'blog/add_post.html'
+
+class UpdatePostView(UpdateView):
+	model = Post
+	form_class = UpdatePostForm
+	template_name = 'blog/update_post.html'
