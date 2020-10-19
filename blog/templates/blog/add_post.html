@@ -2,7 +2,8 @@
 
 {% block content %}
 
-<div class="container">
+{% if user.is_authenticated %}
+<div class="container h-100">
 	<br>
 	<h4>Add Post</h4>
 	<br>
@@ -14,5 +15,11 @@
 		</form>
 	</div>
 </div>
+
+{% else %}
+
+<h4 class="h-100 m-4">You are not supposed to be here. Balit nun 0__0</h4>
+
+{% endif %}
 
 {% endblock %}

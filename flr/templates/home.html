@@ -18,86 +18,7 @@
 
 	{% include '_include/latest_stories.html' %}
 
-	<!--<div class="container-fluid" style="background-color:#000; min-height: 100%;">	
-		<div class="container h-100">
-			<h1 class="heading" style="color:#fff;">Latest Stories</h1>--> 
-
-			<!-- blog list section -->
-			<!--<div class="row">
-
-				{% for post in post_list %}
-				
-
-					<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
-						<div class="card" style="width: 18rem;">
-		  					<img class="card-img-top" src="{% static 'img/showcase.png' %}" height="200">
-		  					<div class="card-body">
-		  						<h5>{{ post.title }}</h5>
-		  						<p class="text-muted">{{ post.author }}</p>
-		  					</div>
-		  					<div class="card-body d-flex align-items-end">
-		  						<a href="blog_post.html"><button type="button" class="btn btn-info">Read More</button></a>
-		  					</div>
-		  					<div class="card-footer">
-		  						<small class="text-muted">{{ post.date_created }}</small>
-		  					</div>
-						</div>
-					</div>						
-
-				
-				{% endfor %}-->
-
-				<!--<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
-					<div class="card" style="width: 18rem;">
-	  					<img class="card-img-top" src="{% static 'img/showcase.png' %}" height="200">
-	  					<div class="card-body">
-	  						<h5>Program Penanaman Somethin di Something Sempena Something</h5>
-	  						<p class="text-muted">Author</p>
-	  					</div>
-	  					<div class="card-body d-flex align-items-end">
-	  						<a href="blog_post.html"><button type="button" class="btn btn-info">Read More</button></a>
-	  					</div>
-	  					<div class="card-footer">
-	  						<small class="text-muted">Last updated on 30 September</small>
-	  					</div>
-					</div>
-				</div>
-
-				<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
-					<div class="card" style="width: 18rem;">
-	  					<img class="card-img-top" src="{% static 'img/showcase.png' %}" height="200">
-	  					<div class="card-body">
-	  						<h5>Program Penanaman Somethin di Something Sempena Something</h5>
-	  						<p class="text-muted">Author</p>
-	  					</div>
-	  					<div class="card-body d-flex align-items-end">
-	  						<a href="blog_post.html"><button type="button" class="btn btn-info">Read More</button></a>
-	  					</div>
-	  					<div class="card-footer">
-	  						<small class="text-muted">Last updated on 30 September</small>
-	  					</div>
-					</div>
-				</div>
-
-				<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
-					<div class="card" style="width: 18rem;">
-	  					<img class="card-img-top" src="{% static 'img/showcase.png' %}" height="200">
-	  					<div class="card-body">
-	  						<h5>Program Penanaman Somethin di Something Sempena Something</h5>
-	  						<p class="text-muted">Author</p>
-	  					</div>
-	  					<div class="card-body d-flex align-items-end">
-	  						<a href="blog_post.html"><button type="button" class="btn btn-info">Read More</button></a>
-	  					</div>
-	  					<div class="card-footer">
-	  						<small class="text-muted">Last updated on 30 September</small>
-	  					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>-->	
+	<!-- End Latest Stories -->
 
 	<!-- Objectives -->
 	<div class="container" style="">
@@ -120,19 +41,17 @@
 	<br>
 
 	<!-- SGC -->
-	<div class="container shadow p-3 mb-5 bg-white rounded">
-		<div class="">
-			<h1 class="heading">Sarawak Government Commitment</h1>
-			<div class="objective-container">
-				<div class="col">
-					<img class="container-fluid" src="{% static 'img/sgc.png' %}">
-				</div>
-				<div class="col">
-					<p class="text-content">Sarawak Chief Minister Datuk Patinggi Abang Johari Openg said today forest restoration is one of the main agenda of the state government from this year onward to enrich the logged-over areas with high value timber species, especially on degraded areas within permanent forest estates.</p>
-					<p class="text-content">“This is to ensure that Sarawak’s forest remains vibrant and its complex eco-system could carry out its natural functions,” he said. He said this will also ensure that the state has sufficient future timber stocking for sustainable production.</p>
-					<p id="citation">Source: Malay Mail, Image: Bernama, Date: 7th March 2019</p>
-					<a class="btn btn-info" href="https://www.malaymail.com/news/malaysia/2019/03/07/forest-restoration-a-major-agenda-for-sarawak-cm-says/1730036" target="_blank">Learn More</a>
-				</div>
+	<div class="container shadow p-3 mb-5 rounded">
+		<h1 class="text-center h1-responsive" style="font-size: 50px;">Sarawak Government Commitment</h1>
+		<div class="objective-container">
+			<div class="col mt-4">
+				<img class="container-fluid" src="{% static 'img/sgc.png' %}">
+			</div>
+			<div class="col mt-4">
+				<p class="text-content">Sarawak Chief Minister Datuk Patinggi Abang Johari Openg said today forest restoration is one of the main agenda of the state government from this year onward to enrich the logged-over areas with high value timber species, especially on degraded areas within permanent forest estates.</p>
+				<p class="text-content">“This is to ensure that Sarawak’s forest remains vibrant and its complex eco-system could carry out its natural functions,” he said. He said this will also ensure that the state has sufficient future timber stocking for sustainable production.</p>
+				<p id="citation">Source: Malay Mail, Image: Bernama, Date: 7th March 2019</p>
+				<a class="btn btn-info" href="https://www.malaymail.com/news/malaysia/2019/03/07/forest-restoration-a-major-agenda-for-sarawak-cm-says/1730036" target="_blank">Learn More</a>
 			</div>
 		</div>
 	</div>
@@ -152,8 +71,8 @@
 	<div class="container">
 		<h1 class="heading">Explore</h1>
 		<div class="row mx-auto">
-			<div class="col">
-				<div class="card" style="width: 18rem;">
+			<div class="col-sm-6 mb-4">
+				<div class="card">
   					<img class="card-img-top" src="img/objectives.png" height="300">
   					<div class="card-body">
    						<h5 class="card-title">Data</h5>
@@ -162,23 +81,13 @@
   					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card" style="width: 18rem;">
+			<div class="col-sm-6 mb-4">
+				<div class="card" >
   					<img class="card-img-top" src="img/objectives.png" height="300" >
   					<div class="card-body">
-   						<h5 class="card-title">Data</h5>
-    					<p class="card-text">We use data-driven approach to enhance our capability</p>
-    					<a href="#" class="btn btn-info">Discover</a>
-  					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card" style="width: 18rem;">
-  					<img class="card-img-top" src="img/objectives.png" height="300">
-  					<div class="card-body">
-   						<h5 class="card-title">Data</h5>
-    					<p class="card-text">We use data-driven approach to enhance our capability</p>
-    					<a href="#" class="btn btn-info">Discover</a>
+   						<h5 class="card-title">Planting Program</h5>
+    					<p class="card-text">Forest restoration requires collaboration from everyone</p>
+    					<a href="#" class="btn btn-info">Join Now</a>
   					</div>
 				</div>
 			</div>

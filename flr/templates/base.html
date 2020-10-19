@@ -42,12 +42,21 @@
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'login' %}">Login</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="{% url 'sign_up' %}">Sign Up</a>
-				</li>
+				{% if user.is_authenticated %}
+					<li class="nav-item">
+						<p class="nav-link m-0" style="color: #fff">@{{ user.username }}</p>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'logout' %}">Log out</a>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'login' %}">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'sign_up' %}">Sign Up</a>
+					</li>
+				{% endif %}	
 			</ul>
 		</div>
 	</nav>

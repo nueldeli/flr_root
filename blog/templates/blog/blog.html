@@ -4,7 +4,9 @@
 	<div class="container">
 		<h1 class="heading h1-responsive">Latest Stories</h1>
 		<div class="text-center">
-		<a href="{% url 'add_post' %}"><button class="btn btn-info">Add Post</button></a>
+		{% if user.is_authenticated %}
+			<a href="{% url 'add_post' %}"><button class="btn btn-info">Add Post</button></a>
+		{% endif %}
 	</div>
 	<div class="row">
 		{% for post in object_list %}
