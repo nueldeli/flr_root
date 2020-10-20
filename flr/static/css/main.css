@@ -65,6 +65,12 @@ ul {
 	text-justify: inter-word;
 }
 
+.text-content img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 .heading {
 	font-family: cardo;
 	padding: 30px;

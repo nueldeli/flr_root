@@ -16,17 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from . import views
-#from django.conf import settings
-#from django.conf.urls.static import static
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
+    path('ckeditor', include('ckeditor_uploader.urls')),
     path('about/', views.about, name='about'),
     path('organization/', views.organization, name='organization'),
     path('', views.home, name='home'),
     path('membership/', include('django.contrib.auth.urls')),
     path('membership/', include('membership.urls'))
-] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

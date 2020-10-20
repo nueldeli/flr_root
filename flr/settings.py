@@ -32,8 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #Blog app
     'blog.apps.BlogConfig',
+    'ckeditor',
+    'ckeditor_uploader',
+    #End blog app
+    #Membership
     'membership.apps.MembershipConfig',
+    #End membership
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,6 +128,8 @@ USE_TZ = True
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'flr/static')]
 STATIC_URL = '/static/'
 
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'flr/media')
 MEDIA_URL = '/media/'
 

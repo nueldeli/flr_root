@@ -7,9 +7,10 @@
 	<br>
 	<h4>Add Post</h4>
 	<br>
-	<div class="form-group">
+	<div class="form-group container h-100">
 		<form method="POST">
 			{% csrf_token %}
+			{{ form.media }}
 			{{ form.as_p }}
 			<button class="btn btn-info">Post</button>
 		</form>

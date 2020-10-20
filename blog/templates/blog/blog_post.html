@@ -4,11 +4,11 @@
 
 	<!-- Blog Post -->
 	<div class="container mh-auto" style="min-height: 100%;">
-		<h1 class="heading">Story</h1>
+		<h1 class="heading" style="color: #d3d3d3">Story</h1>
 
 		<div class="content-container">
 			<div class="container-fluid">
-				<h2 class="font-weight-bold text-center">{{ post.title }}</h2>
+				<h1 class="font-weight-bold text-center">{{ post.title }}</h1>
 				<div class="text-center">
 				{% if user.is_authenticated %}
 					{% if user.id == post.author.id %}
@@ -20,18 +20,8 @@
 
 				<p class="text-muted text-center">{{ post.author.first_name }} {{ post.author.last_name }}<br>{{ post.date_created }}</p>
 				<hr>
-				<figure class="figure">
-					<img src="{{ post.main_img }}" class=" container-fluid figure-img img-fluid rounded">
-					<figcaption class="figure-caption text-right">{{ post.caption_main_img }}</figcaption>
-				</figure>
-				<hr>
 
-				<p class="text-content">{{ post.content | safe }}</p>
-
-				<!--<figure class="figure">
-					<img src="img/partnership.png" class="figure-img img-fluid rounded">
-					<figcaption class="figure-caption text-right">This is an image caption</figcaption>
-				</figure>-->	
+				<p class="text-content">{{ post.content | safe }}</p>	
 			</div>
 		</div>
 	</div>

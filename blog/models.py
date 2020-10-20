@@ -3,12 +3,13 @@ from django.contrib.auth.models import User
 from .utils import unique_slug_generator
 from django.db.models.signals import pre_save
 from django.urls import reverse
+from ckeditor_uploader.fields import RichTextUploadingField
 
 #Status for the blog post
-STATUS_CHOICES = (
-	('draft', 'Draft'),
-	('published', 'Published'),
-)
+##STATUS_CHOICES = (
+	#('draft', 'Draft'),
+	#('published', 'Published'),
+#)
 
 # Create your models here.
 class Post(models.Model):
@@ -16,16 +17,17 @@ class Post(models.Model):
 	title = models.CharField('Blog Title', max_length=200)
 	slug = models.SlugField(max_length=200, null=True, blank=True)
 	date_created = models.DateTimeField(auto_now_add=True)
-	content = models.TextField(blank=True)
+	content = RichTextUploadingField(blank=True)
+	#content = models.TextField(blank=True)
 	date_updated = models.DateTimeField(auto_now=True)
-	main_img = models.ImageField(null=True, blank=True, upload_to='images/')
-	caption_main_img = models.CharField(max_length=250, null=True, blank=True)
-	first_body_img = models.ImageField(null=True, blank=True)
-	caption_first_img = models.CharField(max_length=250, null=True, blank=True)
-	second_body_img = models.ImageField(null=True, blank=True)
-	caption_second_img = models.CharField(max_length=250, null=True, blank=True)
+	thumbnail_img = models.ImageField('Thumbnail',null=True, blank=True, upload_to='uploads/')
+	#caption_main_img = models.CharField(max_length=250, null=True, blank=True)
+	#first_body_img = models.ImageField(null=True, blank=True)
+	#caption_first_img = models.CharField(max_length=250, null=True, blank=True)
+	#second_body_img = models.ImageField(null=True, blank=True)
+	#caption_second_img = models.CharField(max_length=250, null=True, blank=True)
 
-	status = models.CharField(max_length=10, choices = STATUS_CHOICES, default='draft')
+	#status = models.CharField(max_length=10, choices = STATUS_CHOICES, default='draft')
 
 	#class Meta:
 		#ordering = ('-date_created',)

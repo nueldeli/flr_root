@@ -28,12 +28,6 @@ class UpdatePostView(UpdateView):
 	form_class = UpdatePostForm
 	template_name = 'blog/update_post.html'
 
-	def dispath(self, request, *args, **kwargs):
-		obj = self.get_object()
-		if obj.user != self.request.user:
-			raise Http404('You are not allowed to edit this Post')
-		return super(UpdatePostView, self).dispatch(request, *args, **kwargs)
-
 class DeletePostView(DeleteView):
 	model = Post
 	template_name = 'blog/delete_post.html'
