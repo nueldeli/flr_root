@@ -8,7 +8,8 @@ class AddPostForm(forms.ModelForm):
 
 		widgets = {
 			'title':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Blog title'}),
-			'author':forms.Select(attrs={'class':'form-control'}),
+			'author':forms.TextInput(attrs={'class':'form-control', 'value':'', 'id':'writer', 'type':'hidden'}),
+			#'author':forms.Select(attrs={'class':'form-control'}),
 			'content':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Blog content'}),
 		}
 
@@ -19,6 +20,7 @@ class UpdatePostForm(forms.ModelForm):
 
 		widgets = {
 			'title':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Blog title'}),
-			'author':forms.Select(attrs={'class':'form-control'}),
+			'author': forms.TextInput(attrs={'class':'form-control', 'value':'', 'id':'writer', 'type':'hidden'}),
+			#'author':forms.Select(attrs={'class':'form-control'}),
 			'content':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Blog content'})
 		}
