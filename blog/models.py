@@ -20,7 +20,7 @@ class Post(models.Model):
 	content = RichTextUploadingField(blank=True)
 	#content = models.TextField(blank=True)
 	date_updated = models.DateTimeField(auto_now=True)
-	thumbnail_img = models.ImageField('Thumbnail',null=True, blank=True, upload_to='thumbnail/')
+	thumbnail_img = models.ImageField('Thumbnail',null=True, blank=True, upload_to='thumbnail/', default='media/default.jpg')
 	#caption_main_img = models.CharField(max_length=250, null=True, blank=True)
 	#first_body_img = models.ImageField(null=True, blank=True)
 	#caption_first_img = models.CharField(max_length=250, null=True, blank=True)
