@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container h-100">
+	<h1 class="heading">Data</h1>
+	<a href="#">Analytics Overview</a>
+	<a href="{% url 'tree_species' %}">Tree Species</a>
+	<a href="#">Nurseries</a>
+</div>
+
+{% endblock %}

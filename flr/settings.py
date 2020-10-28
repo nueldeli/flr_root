@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     #End blog app
+    #Data
+    'data.apps.DataConfig',
     #Membership
     'membership.apps.MembershipConfig',
     #End membership
