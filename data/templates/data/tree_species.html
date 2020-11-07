@@ -4,8 +4,39 @@
 
 {% block content %}
 
-<div class="container h-100">
-	<p>It works</p>
+<div class=" container ">
+	<br>
+	<h4>Species</h4>
+	<br>
+
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Local Name</th>
+					<th scope="col">Scientific Name</th>
+					<th scope="col">Category</th>
+					<th scope="col">Origin</th>
+					<th scope="col">Total</th>
+					<!--<th scope="col">Descrption</th>-->
+				</tr>
+			</thead>
+			{% for species in object_list %}
+			<tbody>
+				<tr>
+					<td>{{ species.id }}</td>
+					<td>{{ species.local_name }}</td>
+					<td>{{ species.scientific_name }}</td>
+					<td>{{ species.category }}</td>
+					<td>{{ species.origin }}</td>
+					<td>{{ species.quantity }}</td>
+					<!--<td>{{ species.description | truncatewords:50 }}...</td>-->
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
+	</div>
 </div>
 
 {% endblock %}
