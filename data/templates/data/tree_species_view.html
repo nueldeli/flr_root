@@ -22,8 +22,10 @@
 			<p><strong>Remarks: </strong>{{ object.remarks }}</p>
 			<div class="row">
 				<p class="col"><a href="{% url 'tree_species' %}">Back</a></p>
-				<p class="col"><a href="{% url 'update_tree' object.pk %}">Edit</a></p>
-				<p class="col"><a href="{% url 'delete_tree' object.pk %}"><button type="button" class="btn btn-danger">Delete</button></a></p>
+				{% if user.is_authenticated %}
+					<p class="col"><a href="{% url 'update_tree' object.pk %}">Edit</a></p>
+					<p class="col"><a href="{% url 'delete_tree' object.pk %}"><button type="button" class="btn btn-danger">Delete</button></a></p>
+				{% endif %}
 			</div>
 		</div>
 	</div>

@@ -6,12 +6,14 @@
 	<br>
 	<div class="row">
 		<h4 class="col">Species</h4>
-		<a class="col" href="{% url 'add_tree' %}">Add Tree</a>
+		{% if user.is_authenticated %}
+			<a class="col" href="{% url 'add_tree' %}"><button type="button" class="btn btn-info">Add Tree</button></a>
+		{% endif %}
 	</div>
 	<br>
 	<div class="table-responsive">
 		<table class="table">
-			<thead>
+			<thead class="thead-dark">
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Local Name</th>
