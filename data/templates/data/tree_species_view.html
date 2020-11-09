@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div class="container" style="min-height: 100%">
+		<br>
+		<div class="content-container">
+			<h4>{{ object.local_name }}</h4>
+			<p><i>{{ object.scientific_name }}</i></p>
+
+			<br>
+
+			<img class="container-fluid" src="{{ object.get_tree_species_img }}" style="padding: 0">
+
+			<br>
+
+			<p><strong>Category: </strong>{{ object.category }}</p>
+			<p><strong>Origin: </strong>{{ object.origin }}</p>
+			<p><strong>Total: </strong>{{ object.quantity }}</p>
+			<p><strong>Description: </strong>{{ object.description | safe}}</p>
+			<p><strong>Nursery: </strong>{{ object.nursery }}</p>
+			<p><strong>Remarks: </strong>{{ object.remarks }}</p>
+			<div class="row">
+				<p class="col"><a href="{% url 'tree_species' %}">Back</a></p>
+				<p class="col"><a href="{% url 'update_tree' object.pk %}">Edit</a></p>
+				<p class="col"><a href="{% url 'delete_tree' object.pk %}"><button type="button" class="btn btn-danger">Delete</button></a></p>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -10,7 +10,7 @@ class TreeSpeciesData(models.Model):
 	scientific_name = models.CharField(max_length=250, null=True)
 	category = models.CharField(max_length=250, null=True)
 	origin = models.CharField(max_length=250, null=True)
-	quantity = models.IntegerField(null=True)
+	quantity = models.IntegerField('Total', null=True)
 	description = models.TextField(blank=True)
 	nursery = models.CharField(max_length=250, blank=True)
 	remarks = models.CharField(max_length=250, blank=True)
@@ -18,9 +18,9 @@ class TreeSpeciesData(models.Model):
 	def __str__(self):
 		return self.local_name
 
-	def get_thumbnail(self):
+	def get_tree_species_img(self):
 		if self.tree_species_img and hasattr(self.tree_species_img, 'url'):
-			return self.tree_species_img
+			return self.tree_species_img.url
 		return ImageFieldFile(instance=None, field=FileField(), name='/media/tree_species_img/tree_species_default.png')
 
 	def get_absolute_url(self):

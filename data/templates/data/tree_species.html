@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
-{% load static %}
-
 {% block content %}
 
-<div class=" container ">
+<div class="container" style="min-height: 100%">
 	<br>
-	<h4>Species</h4>
+	<div class="row">
+		<h4 class="col">Species</h4>
+		<a class="col" href="{% url 'add_tree' %}">Add Tree</a>
+	</div>
 	<br>
-
 	<div class="table-responsive">
 		<table class="table">
 			<thead>
@@ -19,7 +19,7 @@
 					<th scope="col">Category</th>
 					<th scope="col">Origin</th>
 					<th scope="col">Total</th>
-					<!--<th scope="col">Descrption</th>-->
+					<th scope="col">Action</th>
 				</tr>
 			</thead>
 			{% for species in object_list %}
@@ -31,6 +31,7 @@
 					<td>{{ species.category }}</td>
 					<td>{{ species.origin }}</td>
 					<td>{{ species.quantity }}</td>
+					<td><a href="{% url 'tree_species_view' species.pk %}"><button type="button" class="btn btn-info">View</button></a></td>
 					<!--<td>{{ species.description | truncatewords:50 }}...</td>-->
 				</tr>
 			</tbody>
