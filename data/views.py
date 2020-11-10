@@ -34,3 +34,12 @@ class DeleteTreeView(DeleteView):
 	template_name = 'data/delete_tree.html'
 	success_url = reverse_lazy('tree_species')
 
+#def all_posts(request):
+	#post_list = Post.objects.filter(status='published').order_by('-date_created')
+	#return render(request, 'blog/blog.html', {'post_list':post_list})
+
+def aggregated_sabal(request):
+	q = TreeSpeciesData.objects.filter(nursery__icontains='Sabal')
+	a = q.count()
+	return render(request, 'data/tree_species.html', {'a':a})
+

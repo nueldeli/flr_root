@@ -6,6 +6,7 @@
 	<br>
 	<div class="row">
 		<h4 class="col">Species</h4>
+		<p>{{ a }}</p>
 		{% if user.is_authenticated %}
 			<a class="col" href="{% url 'add_tree' %}"><button type="button" class="btn btn-info">Add Tree</button></a>
 		{% endif %}
@@ -20,6 +21,7 @@
 					<th scope="col">Scientific Name</th>
 					<th scope="col">Category</th>
 					<th scope="col">Origin</th>
+					<th scope="col">Nursery</th>
 					<th scope="col">Total</th>
 					<th scope="col">Action</th>
 				</tr>
@@ -27,11 +29,12 @@
 			{% for species in object_list %}
 			<tbody>
 				<tr>
-					<td>{{ species.id }}</td>
+					<td>{{ forloop.counter }}</td>
 					<td>{{ species.local_name }}</td>
 					<td>{{ species.scientific_name }}</td>
 					<td>{{ species.category }}</td>
 					<td>{{ species.origin }}</td>
+					<td>{{ species.nursery }}</td>
 					<td>{{ species.quantity }}</td>
 					<td><a href="{% url 'tree_species_view' species.pk %}"><button type="button" class="btn btn-info">View</button></a></td>
 					<!--<td>{{ species.description | truncatewords:50 }}...</td>-->

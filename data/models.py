@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.db.models.fields.files import ImageFieldFile, FileField 
 
+
 # Create your models here.
 class TreeSpeciesData(models.Model):
 	date_input = models.DateTimeField(auto_now_add=True)
