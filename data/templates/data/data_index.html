@@ -7,6 +7,9 @@
 	<a href="#">Analytics Overview</a>
 	<a href="{% url 'tree_species' %}">Tree Species</a>
 	<a href="#">Nurseries</a>
+	<p>{{ a }}</p>
 </div>
+
+{% include 'data/_include/niah_nursery.html' %}
 
 {% endblock %}

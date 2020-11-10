@@ -41,5 +41,5 @@ class DeleteTreeView(DeleteView):
 def aggregated_sabal(request):
 	q = TreeSpeciesData.objects.filter(nursery__icontains='Sabal')
 	a = q.count()
-	return render(request, 'data/tree_species.html', {'a':a})
+	return render(request, 'data/data_index.html', {'a':a})
 
