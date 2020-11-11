@@ -4,7 +4,6 @@ from .views import TreeSpeciesView, AddTreeView, SpeciesView, UpdateTreeView, De
 
 urlpatterns = [
 	path('', views.data_index, name='data'),
-	path('tree_species/', views.aggregated_sabal),
 	path('tree_species/', TreeSpeciesView.as_view(), name='tree_species'),
 	path('tree_species_view/<int:pk>', SpeciesView.as_view(), name='tree_species_view'),
 	path('add_tree/', AddTreeView.as_view(), name='add_tree'),

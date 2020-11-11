@@ -6,7 +6,14 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 def data_index(request):
-	return render(request, 'data/data_index.html')
+	all_tree_species = TreeSpeciesData.objects.all()
+	niah_list = all_tree_species.filter(nursery__icontains='Niah')
+	sabal_list = all_tree_species.filter(nursery__icontains='Sabal')
+	semenggoh_list = all_tree_species.filter(nursery__icontains='Semenggoh')
+	niah_count = niah_list.count()
+	sabal_count = sabal_list.count()
+	semenggoh_count = semenggoh_list.count()
+	return render(request, 'data/data_index.html', {'niah_count':niah_count, 'sabal_count':sabal_count, 'semenggoh_count':semenggoh_count})
 
 class TreeSpeciesView(ListView):
 	model = TreeSpeciesData
@@ -38,8 +45,4 @@ class DeleteTreeView(DeleteView):
 	#post_list = Post.objects.filter(status='published').order_by('-date_created')
 	#return render(request, 'blog/blog.html', {'post_list':post_list})
 
-def aggregated_sabal(request):
-	q = TreeSpeciesData.objects.filter(nursery__icontains='Sabal')
-	a = q.count()
-	return render(request, 'data/data_index.html', {'a':a})
 

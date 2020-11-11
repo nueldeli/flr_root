@@ -2,14 +2,32 @@
 
 {% block content %}
 
-<div class="container h-100">
-	<h1 class="heading">Data</h1>
-	<a href="#">Analytics Overview</a>
-	<a href="{% url 'tree_species' %}">Tree Species</a>
-	<a href="#">Nurseries</a>
-	<p>{{ a }}</p>
+<div class="container" style="min-height: 100%">
+	<h1 class="heading" style="color: #d3d3d3">Data</h1>
+	<h3 class="text-center"><a href="#">Analytics Overview</a></h3>
+
+	<h3 class="text-center"><a href="#">Nurseries</a></h3>
+
+	<div class="border rounded">
+		<div class="m-4">
+			<h3>Tree Species</h3>
+			<p>You can view all the species that we have planted, cultivated and studied in this master data list.</p>
+			<a href="{% url 'tree_species' %}" class="btn btn-info">View species</a>
+		</div>
+	</div>
+	<br>
+	<div class="border rounded">
+		<div class="m-4">
+			<h3>Nurseries</h3>
+			<p>Our nurseries are home for the seedlings. This section outlines the general information of each nursery such as geographical data, species planted at each nursery and the total species each nursery has.</p>
+			<a href="{% url 'tree_species' %}" class="btn btn-info">View species</a>
+		</div>
+	</div>
+
 </div>
 
-{% include 'data/_include/niah_nursery.html' %}
+<p>{{ sabal_count }}</p>
+<p>{{ niah_count }}</p>
+<p>{{ semenggoh_count }}</p>
 
 {% endblock %}
