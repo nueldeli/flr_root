@@ -4,16 +4,25 @@ from .models import TreeSpeciesData
 from .forms import AddTreeForm, UpdateTreeForm
 from django.urls import reverse_lazy
 
+all_tree_species = TreeSpeciesData.objects.all()
+
+niah_list = all_tree_species.filter(nursery__icontains='Niah')
+sabal_list = all_tree_species.filter(nursery__icontains='Sabal')
+semenggoh_list = all_tree_species.filter(nursery__icontains='Semenggoh')
+
+niah_count = niah_list.count()
+sabal_count = sabal_list.count()
+semenggoh_count = semenggoh_list.count()
+
 # Create your views here.
 def data_index(request):
-	all_tree_species = TreeSpeciesData.objects.all()
-	niah_list = all_tree_species.filter(nursery__icontains='Niah')
-	sabal_list = all_tree_species.filter(nursery__icontains='Sabal')
-	semenggoh_list = all_tree_species.filter(nursery__icontains='Semenggoh')
-	niah_count = niah_list.count()
-	sabal_count = sabal_list.count()
-	semenggoh_count = semenggoh_list.count()
-	return render(request, 'data/data_index.html', {'niah_count':niah_count, 'sabal_count':sabal_count, 'semenggoh_count':semenggoh_count})
+	return render(request, 'data/data_index.html')
+
+def nursery_index(request):
+	return render(request, 'data/nursery.html', {'niah_count':niah_count, 'sabal_count':sabal_count, 'semenggoh_count':semenggoh_count})
+
+def sabal_species(request):
+	return render(request, 'data/_include/sabal_species.html', {'sabal_list':sabal_list})
 
 class TreeSpeciesView(ListView):
 	model = TreeSpeciesData

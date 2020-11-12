@@ -9,4 +9,6 @@ urlpatterns = [
 	path('add_tree/', AddTreeView.as_view(), name='add_tree'),
 	path('tree_species_view/<int:pk>/update', UpdateTreeView.as_view(), name='update_tree'),
 	path('tree_species_view/<int:pk>/delete', DeleteTreeView.as_view(), name='delete_tree'),
+	path('nursery/', views.nursery_index, name='nursery'),
+	path('sabal_species/', views.sabal_species, name='sabal_species'),
 ]
