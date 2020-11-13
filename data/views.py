@@ -8,7 +8,7 @@ all_tree_species = TreeSpeciesData.objects.all()
 
 niah_list = all_tree_species.filter(nursery__icontains='Niah')
 sabal_list = all_tree_species.filter(nursery__icontains='Sabal')
-semenggoh_list = all_tree_species.filter(nursery__icontains='Semenggoh')
+semenggoh_list = all_tree_species.filter(nursery__icontains='IFRC')
 
 niah_count = niah_list.count()
 sabal_count = sabal_list.count()
@@ -23,6 +23,12 @@ def nursery_index(request):
 
 def sabal_species(request):
 	return render(request, 'data/_include/sabal_species.html', {'sabal_list':sabal_list})
+
+def semenggoh_species(request):
+	return render(request, 'data/_include/semenggoh_species.html', {'semenggoh_list':semenggoh_list})
+
+def niah_species(request):
+	return render(request, 'data/_include/niah_species.html', {'niah_list':niah_list})
 
 class TreeSpeciesView(ListView):
 	model = TreeSpeciesData

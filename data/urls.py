@@ -11,4 +11,6 @@ urlpatterns = [
 	path('tree_species_view/<int:pk>/delete', DeleteTreeView.as_view(), name='delete_tree'),
 	path('nursery/', views.nursery_index, name='nursery'),
 	path('sabal_species/', views.sabal_species, name='sabal_species'),
+	path('semenggoh_species/', views.semenggoh_species, name='semenggoh_species'),
+	path('niah_species/', views.niah_species, name='niah_species'),
 ]

@@ -2,6 +2,40 @@
 
 {% block content %}
 
-<p>It works niah</p>
+<div class="container" style="min-height: 100%">
+	<br>
+	<h3>Niah Forest Research Station</h3>
+	<div class="table-responsive">
+		<table class="table">
+			<thead class="thead">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Local Name</th>
+					<th scope="col">Scientific Name</th>
+					<th scope="col">Category</th>
+					<th scope="col">Origin</th>
+					<th scope="col">Nursery</th>
+					<th scope="col">Total</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			{% for species in niah_list %}
+			<tbody>
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td>{{ species.local_name }}</td>
+					<td>{{ species.scientific_name }}</td>
+					<td>{{ species.category }}</td>
+					<td>{{ species.origin }}</td>
+					<td>{{ species.nursery }}</td>
+					<td>{{ species.quantity }}</td>
+					<td><a href="{% url 'tree_species_view' species.pk %}"><button type="button" class="btn btn-info">View</button></a></td>
+					<!--<td>{{ species.description | truncatewords:50 }}...</td>-->
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
+	</div>
+</div>
 
 {% endblock %}
