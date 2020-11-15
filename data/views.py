@@ -3,10 +3,19 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import TreeSpeciesData
 from .forms import AddTreeForm, UpdateTreeForm
 from django.urls import reverse_lazy
+from django.db.models import Sum
 
 # Create your views here.
 def data_index(request):
-	return render(request, 'data/data_index.html')
+	all_tree_species = TreeSpeciesData.objects.all()
+	niah_count = all_tree_species.filter(nursery__icontains='Niah').count()
+	sabal_count = all_tree_species.filter(nursery__icontains='Sabal').count()
+	semenggoh_count = all_tree_species.filter(nursery__icontains='IFRC').count()
+	cumulative_species = all_tree_species.aggregate(Sum('quantity'))['quantity__sum']
+	total_species = niah_count + sabal_count + semenggoh_count
+	label = ['Sabal FLR Centre','Niah FRS','IFRC Semenggoh']
+	data = [sabal_count, niah_count, semenggoh_count]
+	return render(request, 'data/data_index.html', {'label':label,'data':data, 'total_species':total_species, 'cumulative_species': cumulative_species})
 
 #---Nursery views ---
 def nursery_index(request):
@@ -32,17 +41,6 @@ def niah_species(request):
 	return render(request, 'data/_include/niah_species.html', {'niah_list':niah_list})
 #--- end of nursery views --
 
-
-#---chart / analytics overview---
-def pie_chart(request):
-	all_tree_species = TreeSpeciesData.objects.all()
-	niah_count = all_tree_species.filter(nursery__icontains='Niah').count()
-	sabal_count = all_tree_species.filter(nursery__icontains='Sabal').count()
-	semenggoh_count = all_tree_species.filter(nursery__icontains='IFRC').count()
-	label = ['Sabal FLR Centre', 'Niah Forest Research Station', 'IFRC Semenggoh']
-	data = [sabal_count, niah_count, semenggoh_count]
-	return render(request, 'data/data_index.html', {'label':label, 'data':data})
-#---end of chart / analytics overview ---
 
 class TreeSpeciesView(ListView):
 	model = TreeSpeciesData
