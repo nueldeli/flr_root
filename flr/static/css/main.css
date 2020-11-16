@@ -4,6 +4,8 @@ body, html {
 	height: 100%;
 }
 
+
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: cardo;
 }
@@ -76,7 +78,7 @@ ul {
 	padding: 30px;
 	font-size: 50px;
 	font-weight: bold;
-	/*color: #7bb18d;*/
+	/*color: #d3d3d3;*/
 	text-align: center;
 	align-self: center;
 }
