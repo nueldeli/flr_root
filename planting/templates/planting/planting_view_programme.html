@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+	<br>
+	<div class=" border rounded mb-3">
+		<!--723 x 180 -->
+		<img class="card-img-top" src="{% static 'img/planting_img.png' %}" alt="Card image cap">
+		<div class="card-body">
+			<div class="row">
+				<h5 class="col-lg-8 card-title">Programme name sempena something di something untuk merasmikan something</h5>
+				<p class="col-lg-4 card-text">11 September 2020</p>
+			</div>
+			<p class="card-text">Location</p>
+			<p class="card_text">Region</p>
+			<p class="card-text">Area</p>
+			<p class="card-text">Species</p>
+			<p class="card-text">Participants</p>
+			<p class="card-text"><small class="text-muted">Date created</small></p>
+		</div>
+	</div>
+</div>
+{% endblock %}

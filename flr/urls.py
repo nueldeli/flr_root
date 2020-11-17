@@ -29,6 +29,7 @@ urlpatterns = [
     path('membership/', include('django.contrib.auth.urls')),
     path('membership/', include('membership.urls')),
     path('data/', include('data.urls')),
+    path('planting/', include('planting.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

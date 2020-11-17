@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     #End blog app
     #Data
     'data.apps.DataConfig',
+    #Planting
+    'planting.apps.PlantingConfig',
     #Membership
     'membership.apps.MembershipConfig',
     #End membership
