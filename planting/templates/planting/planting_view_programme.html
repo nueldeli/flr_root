@@ -5,21 +5,43 @@
 {% block content %}
 <div class="container">
 	<br>
+	{% if user.is_authenticated %}
+	<div class="text-center">
+		<a class="btn btn-info" href="{% url 'add_programme' %}">Add Programme</a>
+	</div>
+	{% endif %}
+	<br>
+	{% for programme in object_list %}
 	<div class=" border rounded mb-3">
 		<!--723 x 180 -->
-		<img class="card-img-top" src="{% static 'img/planting_img.png' %}" alt="Card image cap">
+		<img style="height: ;" class="card-img-top" src="{% static 'img/planting_img.png' %}" alt="Card image cap">
 		<div class="card-body">
 			<div class="row">
-				<h5 class="col-lg-8 card-title">Programme name sempena something di something untuk merasmikan something</h5>
-				<p class="col-lg-4 card-text">11 September 2020</p>
+				<div class="col-lg-8 text-left">
+					<h5 class="card-title">{{ programme.programme_name }}</h5>
+				</div>
+				<div class="col-lg-4 text-right">
+					<h6 class="card-text">Programme date : {{ programme.date_planted }}</h6>
+				</div>
 			</div>
-			<p class="card-text">Location</p>
-			<p class="card_text">Region</p>
-			<p class="card-text">Area</p>
-			<p class="card-text">Species</p>
-			<p class="card-text">Participants</p>
-			<p class="card-text"><small class="text-muted">Date created</small></p>
+			
+			<ul class="list-unstyled">
+				<li>Location: {{ programme.location }}</li>
+				<li>Region: {{ programme.region }}</li>
+				<li>Area: {{ programme.area }}</li>
+				<li>Species: {{ programme.species }}</li>
+				<li>Participants: {{ programme.participants }}</li>
+			</ul>
+			<p class="card-text"><small class="text-muted">Date created: {{ programme.date_created }}</small></p>
+
+			{% if user.is_authenticated %}
+			<div class="row">
+				<div class="col text-left"><a class="btn btn-info" href="{% url 'update_programme' programme.pk %}">Edit</a></div>
+				<div class="col text-right"><a class="btn btn-danger" href="{% url 'delete_programme' programme.pk %}">Delete</a></div>
+			{% endif %}
+			</div>
 		</div>
 	</div>
+	{% endfor %}
 </div>
 {% endblock %}

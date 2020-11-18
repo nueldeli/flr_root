@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from datetime import datetime
 
 # Create your models here.
 class PlantingRecord(models.Model):
@@ -21,4 +23,4 @@ class PlantingRecord(models.Model):
 		return ImageFieldFile(instance=None, field=FileField(), name='/media/programme_img/programme_img_default.png')
 
 	def get_absolute_url(self):
-		return reverse('planting')
+		return reverse('planting_index')
