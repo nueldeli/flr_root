@@ -3,6 +3,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView, D
 from .models import PlantingRecord, CartSpecies
 from .forms import AddProgrammeForm, UpdateProgrammeForm, AddCartForm, UpdateCartForm
 from django.urls import reverse_lazy
+from django.http import JsonResponse
 
 def planting_index(request):
 	return render(request, 'planting/planting_index.html')
@@ -56,6 +57,9 @@ class DeleteCartView(DeleteView):
 	model = CartSpecies
 	template_name = 'planting/delete_cart.html'
 	success_url = reverse_lazy('planting_partner_view')
+
+def updateItem(request):
+	return JsonResponse('Item was added', safe=False)
 
 
 
