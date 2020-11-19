@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+	<br>
+	<h4>Update Species</h4>
+	<br>
+	<div class="form-group container h-100">
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ form.media }}
+			{{ form.as_p }}
+			<button class="btn btn-info">Update</button>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

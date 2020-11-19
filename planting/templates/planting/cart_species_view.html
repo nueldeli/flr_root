@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" style="min-height: 100%">
+		<br>
+		<div class="content-container">
+			<h4>{{ object.cart_local_name }}</h4>
+			<p><i>{{ object.cart_scientific_name }}</i></p>
+
+			<br>
+
+			<img class="container-fluid" src="{{ object.get_cart_img }}" style="padding: 0">
+
+			<br>
+
+			<p><strong>Category: </strong>{{ object.cart_species_category }}</p>
+			<p><strong>Total: </strong>{{ object.cart_species_total }}</p>
+			<p><strong>Description: </strong>{{ object.cart_species_descriptions }}</p>
+			<div class="row">
+				<p class="col"><a class="btn btn-info" href="{% url 'planting_partner_view' %}">Back</a></p>
+				{% if user.is_authenticated %}
+					<p class="col"><a class="btn btn-info" href="{% url 'update_cart' object.pk %}">Edit</a></p>
+					<p class="col"><a class="btn btn-danger" href="{% url 'delete_cart' object.pk %}">Delete</a></p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

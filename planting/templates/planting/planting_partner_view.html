@@ -3,6 +3,11 @@
 {% block content %}
 
 <div class="container">
+	<div class="text-center mt-4">
+		{% if user.is_authenticated %}
+			<a class="btn btn-info" href="{% url 'add_cart' %}">Add Species</a>
+		{% endif %}
+	</div>
 	<div class="border rounded p-4 mt-4">
 		<p class="text-content">Planting trees has never been easier. Now, anybody can join the restoration quest. It's just a few clicks away.</p>
 		<p class="text-content"><strong>Step 1:</strong> Register your details. If you already registered, proceed the second step.</p>
@@ -19,20 +24,23 @@
 
 	<!-- Tree List  Catalogue-->
 	<div class="row">
+		{% for species in object_list %}
 		<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
 			<div class="card" style="width: 18rem;">
-			  <img class="card-img-top" src="img/showcase.png" height="250">
+			  <img class="card-img-top" src="{{ species.get_cart_img }}" height="250">
 			  <div class="card-body">
-			    <h5 class="card-title">Nama pokok</h5>
-			    <p class="card-text">Nama saintifik</p>
-			    <p>Category: Something</p>
+			  	<ul class="list-unstyled">
+				    <h5 class="card-title">{{ species.cart_local_name }}</h5>
+				    <p class="card-text"><i>{{ species.cart_scientific_name }}</i></p>
+				</ul>
 		    	<div class="d-flex">
 		    		<a class="btn btn-info" href="#" role='button'>Add</a>
-		    		<a class="btn btn-primary ml-4" href="#" role='button'>View</a>
+		    		<a class="btn btn-primary ml-4" href="{% url 'cart_species_view' species.pk %}" role='button'>View</a>
 		    	</div>
 			  </div>
 			</div>
 		</div>
+		{% endfor %}
 	</div>
 </div>
 
