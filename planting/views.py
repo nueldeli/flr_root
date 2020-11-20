@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
-from .models import PlantingRecord, CartSpecies
+from .models import PlantingRecord, CartSpecies, Order
 from .forms import AddProgrammeForm, UpdateProgrammeForm, AddCartForm, UpdateCartForm
 from django.urls import reverse_lazy
 from django.http import JsonResponse
@@ -58,6 +58,15 @@ class DeleteCartView(DeleteView):
 	template_name = 'planting/delete_cart.html'
 	success_url = reverse_lazy('planting_partner_view')
 
+def planting_cart(request):
+	if request.user.is_authenticated:
+		partner = request.user.partner
+		order, created = Order.objects.filter(partner=partner, complete=False)
+		items = order.orderitem_set.all()
+	else:
+		items = []
+	return render(request, 'planting/planting_cart.html', {'items':items})
+
 def updateItem(request):
 	data = json.loads(request.body)
 	speciesId = data['speciesId']
@@ -66,6 +75,8 @@ def updateItem(request):
 	print('Action', action)
 	print('speciesId', speciesId)
 	return JsonResponse('Item was added', safe=False)
+
+
 
 
 

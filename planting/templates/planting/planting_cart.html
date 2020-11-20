@@ -5,9 +5,40 @@
 {% block content %}
 
 <div class="container">
-	<table class="table">
-		
-	</table>
+	<br>
+	<div class="row">
+		<div class="col-lg-12 border rounded p-4 mb-4">
+			<div class="row">
+				<div class="col">
+					<p>Total items: 3</p>
+				</div>
+				<div class="col text-right">
+					<a class="btn btn-success" href="#">Checkout</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-12 table-responsive border rounded">
+			<table class="table">
+				<thead class="">
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Species</th>
+						<th scope="col">Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in items %}
+					<tr>
+						<td><img width="150" src="{{ item.species.get_cart_img }}"></td>
+						<td>{{ item.species.cart_local_name }}</td>
+						<td>{{ item.quantity }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 
 {% endblock %}
