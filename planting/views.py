@@ -59,6 +59,12 @@ class DeleteCartView(DeleteView):
 	success_url = reverse_lazy('planting_partner_view')
 
 def updateItem(request):
+	data = json.loads(request.body)
+	speciesId = data['speciesId']
+	action = data['action']
+
+	print('Action', action)
+	print('speciesId', speciesId)
 	return JsonResponse('Item was added', safe=False)
 
 

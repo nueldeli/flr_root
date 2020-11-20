@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models import PlantingRecord, CartSpecies
+from .models import *
 # Register your models here.
 admin.site.register(PlantingRecord)
 admin.site.register(CartSpecies)
+admin.site.register(Partner)
+admin.site.register(Order)
+admin.site.register(OrderItem)

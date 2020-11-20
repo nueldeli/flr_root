@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.urls import reverse
 #from datetime import datetime
 from django.db.models.fields.files import ImageFieldFile, FileField 
@@ -45,3 +46,27 @@ class CartSpecies(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('planting_partner_view')
+
+class Partner(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+	name = models.CharField(max_length=250, null=True)
+	email = models.CharField(max_length=250, null=True)
+	organization = models.CharField(max_length=250, null=True, blank=True)
+
+	def __str__(self):
+		return self.name
+
+class Order(models.Model):
+	partner = models.ForeignKey(Partner, on_delete=models.SET_NULL, null=True, blank=True)
+	date_ordered = models.DateTimeField(auto_now_add=True)
+	complete = models.BooleanField(default=False)
+	transaction_id = models.CharField(max_length=100, null=True)
+
+	def __str__(self):
+		return str(self.id)
+
+class OrderItem(models.Model):
+	species = models.ForeignKey(CartSpecies, on_delete=models.SET_NULL, null=True)
+	order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
+	quantity = models.IntegerField(default=0, null=True, blank=True)
+	date_added= models.DateTimeField(auto_now_add=True)
