@@ -4,6 +4,7 @@ from .models import PlantingRecord, CartSpecies, Order
 from .forms import AddProgrammeForm, UpdateProgrammeForm, AddCartForm, UpdateCartForm
 from django.urls import reverse_lazy
 from django.http import JsonResponse
+import json
 
 def planting_index(request):
 	return render(request, 'planting/planting_index.html')

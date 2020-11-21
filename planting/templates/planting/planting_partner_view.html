@@ -36,7 +36,7 @@
 				    <p class="card-text"><i>{{ species.cart_scientific_name }}</i></p>
 				</ul>
 		    	<div class="d-flex">
-		    		<a data-species={{ species.id }} data-action='add' class="btn btn-info update-cart" href="#" role='button'>Add</a>
+		    		<a data-species='{{ species.id }}' data-action='add' class="btn btn-info update-cart" href="#" role='button'>Add</a>
 		    		<a class="btn btn-primary ml-4" href="{% url 'cart_species_view' species.pk %}" role='button'>View</a>
 		    	</div>
 			  </div>
