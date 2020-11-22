@@ -13,6 +13,6 @@ urlpatterns = [
 	path('add_cart_species/', AddCartView.as_view(), name='add_cart'),
 	path('update_cart_species/<int:pk>/', UpdateCartView.as_view(), name='update_cart'),
 	path('delete_cart_species/<int:pk>/', DeleteCartView.as_view(), name='delete_cart'),
-	path('update_item/', views.updateItem, name='update_item'),
+	path('update_item/', views.update_item, name='update_item'),
 	path('planting_cart/', views.planting_cart, name='planting_cart'),
 ]

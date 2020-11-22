@@ -29,11 +29,11 @@ function updateUserOrder(speciesId, action){
 		body:JSON.stringify({'speciesId': speciesId, 'action':action})
 	})
 
-	.then((response) =>{
+	.then(response =>{
 		return response.json()
 	}) 
 
-	.then((data) =>{
+	.then(data =>{
 		console.log('data:', data)
 	}) 
 }

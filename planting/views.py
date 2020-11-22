@@ -62,17 +62,17 @@ class DeleteCartView(DeleteView):
 def planting_cart(request):
 	if request.user.is_authenticated:
 		partner = request.user.partner
-		order, created = Order.objects.filter(partner=partner, complete=False)
+		order, created = Order.objects.get_or_create(partner=partner, complete=False)
 		items = order.orderitem_set.all()
 	else:
 		items = []
 	return render(request, 'planting/planting_cart.html', {'items':items})
 
-def updateItem(request):
-	data = json.loads(request.body)
+def update_item(request):
+	data = json.loads({request.body})
 	speciesId = data['speciesId']
 	action = data['action']
-
+	
 	print('Action', action)
 	print('speciesId', speciesId)
 	return JsonResponse('Item was added', safe=False)
