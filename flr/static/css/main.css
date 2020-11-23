@@ -61,7 +61,7 @@ ul {
 
 /*Global */
 .navbar-custom {
-		background-color: #031D44;
+		background-color: #000;
 	}
 
 .text-content {
@@ -195,7 +195,7 @@ ul {
 
 .page-footer {
 	margin-top: 100px;
-	background-color: /*#228e69;*/#031D44;
+	background-color: /*#228e69;*/#000;
 	color: #fff;
 }
 
