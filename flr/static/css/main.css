@@ -1,5 +1,5 @@
 body, html {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	height: 100%;
 }
@@ -7,7 +7,7 @@ body, html {
 
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: cardo;
+	font-family: 'Merriweather', serif;
 }
 
 a {
@@ -20,6 +20,7 @@ ul {
 }
 
 @media (min-width: 468px){
+
 	.update-container {
 		display: flex;
 	}
@@ -59,7 +60,9 @@ ul {
 
 
 /*Global */
-
+.navbar-custom {
+		background-color: #031D44;
+	}
 
 .text-content {
 	font-size: 16px;
@@ -71,16 +74,6 @@ ul {
 	max-width: 100%;
 	height: auto;
 	display: block;
-}
-
-.heading {
-	font-family: cardo;
-	padding: 30px;
-	font-size: 50px;
-	font-weight: bold;
-	/*color: #d3d3d3;*/
-	text-align: center;
-	align-self: center;
 }
 
 .text-title-card {
@@ -100,7 +93,7 @@ ul {
 
 #navbar-logo {
 	position: relative;
-	width: 70px;
+	width: 150px;
 }
 
 .navbar-nav {
@@ -129,7 +122,7 @@ ul {
 }
 
 .hero-header {
-	font-family: cardo;
+	font-family: Merriweather;
 	font-weight: bold;
 	align-self: center;
 	font-size: 50px;
@@ -157,7 +150,7 @@ ul {
 }
 
 .btn-info {
-	background-color: #7bb18d;
+	background-color: #031D44;
 	border: none;
 }
 
@@ -202,12 +195,12 @@ ul {
 
 .page-footer {
 	margin-top: 100px;
-	background-color: #228e69;
+	background-color: /*#228e69;*/#031D44;
 	color: #fff;
 }
 
 .footer-copyright {
-	background-color: #000;
+	background-color: #5fb49c;
 }
 
 .list-unstyled img {

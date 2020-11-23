@@ -11,8 +11,14 @@
 	<meta name="keywords" content="forest landscape restoration, forest restoration">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<!--<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">-->
+	<!--<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">-->
+	<!--<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">-->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 
 	<script type="text/javascript">
@@ -40,9 +46,9 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
 		<!-- logo asal -->
-		<a class="navbar-brand" id="navbar-name" href="{% url 'home' %}"><img id="navbar-logo" src="{% static 'img/flr_logo_day.png' %}"></a>
+		<a class="navbar-brand" id="navbar-name" href="{% url 'home' %}"><img id="navbar-logo" src="{% static 'img/flr_logo_white.png' %}"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 		</button>
@@ -107,7 +113,7 @@
 	        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">ADDRESS</h5>
 
 	        <ul class="list-unstyled">
-	          <img src="{% static 'img/flr_logo_day.png' %}" width="200">
+	          <img src="{% static 'img/flr_logo_white.png' %}" width="200">
 	          <br>
 	          <h6><a class="link-unstyled" href=""> FOREST DEPARTMENT SARAWAK</a></h6>
 	          <p>Forest Department Sarawak Headquarters<br>Level 11-15, Bangunan Baitulmakmur II, Petra Jaya, 93050 Kuching, Sarawak</p>

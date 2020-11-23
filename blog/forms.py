@@ -12,7 +12,7 @@ class AddPostForm(forms.ModelForm):
 			'slug':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Slug is automatically generated. It\'s OK to leave it empty'}),
 			#'author':forms.Select(attrs={'class':'form-control'}),
 			'content':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Blog content'}),
-			'thumbnail_img':forms.FileInput
+			'thumbnail_img':forms.FileInput()
 		}
 
 class UpdatePostForm(forms.ModelForm):
@@ -26,5 +26,5 @@ class UpdatePostForm(forms.ModelForm):
 			'slug':forms.TextInput(attrs={'class':'form-control', 'placeholder':'Slug is automatically generated. It\'s OK to leave it empty'}),
 			#'author':forms.Select(attrs={'class':'form-control'}),
 			'content':forms.Textarea(attrs={'class':'form-control', 'placeholder':'Blog content'}),
-			'thumbnail_img':forms.FileInput
+			'thumbnail_img':forms.FileInput()
 		}
