@@ -12,3 +12,6 @@ def about(request):
 
 def organization(request):
 	return render(request, 'organization.html')
+
+def why_it_matters(request):
+	return render(request, 'why_it_matters.html')

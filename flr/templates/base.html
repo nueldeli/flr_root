@@ -55,35 +55,35 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'about' %}">About</a>
+					<a class="nav-link text-light" href="{% url 'about' %}">About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'organization' %}">Organization</a>
+					<a class="nav-link text-light" href="{% url 'organization' %}">Organization</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'blog' %}">Blog</a>
+					<a class="nav-link text-light" href="{% url 'blog' %}">Blog</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'data' %}">Data</a>
+					<a class="nav-link text-light" href="{% url 'data' %}">Data</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'planting_index' %}">Planting</a>
+					<a class="nav-link text-light" href="{% url 'planting_index' %}">Planting</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				{% if user.is_authenticated %}
 					<li class="nav-item">
-						<p class="nav-link m-0" style="color: #fff">@{{ user.username }}</p>
+						<p class="nav-link text-light m-0" style="color: #fff">@{{ user.username }}</p>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'logout' %}">Log out</a>
+						<a class="nav-link text-light" href="{% url 'logout' %}">Log out</a>
 					</li>
 				{% else %}
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'login' %}">Login</a>
+						<a class="nav-link text-light" href="{% url 'login' %}">Login</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'sign_up' %}">Sign Up</a>
+						<a class="nav-link text-light" href="{% url 'sign_up' %}">Sign Up</a>
 					</li>
 				{% endif %}	
 			</ul>

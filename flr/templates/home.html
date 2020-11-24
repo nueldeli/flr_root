@@ -20,48 +20,43 @@
 
 	<!-- End Latest Stories -->
 
-	<!-- Objectives -->
+	<!-- SGC -->
 	<div class="container mt-5 mb-5">
-		<div class="container-fluid p-3 border rounded shadow p-4">
-			<h3 class="font-weight-bold pb-4 ">Our Goals</h3>
-			<p>1. To enrich logged-over areas with high value timber species</p>
-			<p>2. To restore and conserve degraded forests in Permanent Forest Estate (PFE) and State land</p>
-			<p>3. To elevate livelihood of forest-dependent communities</p>
-			<p>4. To reduce pressure on natural forests by shifting timber production towards plantations of indigeneous fast-growing species</p>
-			<div class="pt-4">
-				<a class="btn btn-primary" href="#">Why it matters</a>
+		<div class="container-fluid p-4 border rounded shadow">
+		<div class="row">
+			<div class="col-sm-6">
+				<img class="w-100 mb-4" src="{% static 'img/sgc.png' %}">
+			</div>
+			<div class="col-sm-6">
+				<h3 class="font-weight-bold">Sarawak Government Commitment</h3>
+				<p>Sarawak Chief Minister Datuk Patinggi Abang Johari Openg said today forest restoration is one of the main agenda of the state government from this year onward to enrich the logged-over areas with high value timber species, especially on degraded areas within permanent forest estates.</p>
+				<p>“This is to ensure that Sarawak’s forest remains vibrant and its complex eco-system could carry out its natural functions,” he said. He said this will also ensure that the state has sufficient future timber stocking for sustainable production.</p>
+				<p id="citation">Source: Malay Mail, Image: Bernama, Date: 7th March 2019</p>
+				<a class="btn btn-info" href="https://www.malaymail.com/news/malaysia/2019/03/07/forest-restoration-a-major-agenda-for-sarawak-cm-says/1730036" target="_blank">Learn More</a>
 			</div>
 		</div>
 	</div>
+	</div>
 
-			<!--<div class="text-content">
-				<h3 class="font-weight-bold pb-4">Our Goals</h3>
-				<p>1. To enrich logged-over areas with high value timber species</p>
-				<p class="text-content font-weight-bold">2. To restore and conserve degraded forests in Permanent Forest Estate (PFE) and State land</p>
-				<p class="text-content font-weight-bold">3. To elevate livelihood of forest-dependent communities</p>
-				<p class="text-content font-weight-bold">4. To reduce pressure on natural forests by shifting timber production towards plantations of indigeneous fast-growing species</p>
-				<div class="container-fluid" style="text-align: center; padding: 30px 0;">
-					<a class="btn btn-info" href="#">Why it matters?</a>
+	<!-- Objectives -->
+	<div style="background-image: url('static/img/background-img.jpg'); background-repeat: no-repeat; background-size: cover;">
+		<div class="container mt-5 mb-5 pt-5 pb-5">
+			<div class="container-fluid border rounded shadow p-4" style="background-color: #fff;">
+				<div class="row">
+				<div class="col-sm-8">
+					<h3 class="font-weight-bold pb-4 ">Our Goals</h3>
+					<p>1. Regain ecological functionality of forest in Sarawak</p>
+					<p>2. Enhance human well-being and livelihood of forest-dependent communities </p>
+					<p>3. Re-establish the structure, productivity, and species diversity of forest</p>
+					<p>4. Ensure sufficient future timber stocking for sustainable forest management</p>
+					<div class="pt-4">
+						<a class="btn btn-info" href="{% url 'why' %}">Why it matters</a>
+					</div>
 				</div>
-			<div class="col">
-				<hr class="container-fluid">
-			</div>
-			</div>-->
-
-	<br>
-
-	<!-- SGC -->
-	<div class="container">
-		<div class="row container-fluid shadow p-3 mb-5 rounded">
-			<div class="col-sm-6">
-				<img class="container-fluid" src="{% static 'img/sgc.png' %}">
-			</div>
-			<div class="col-sm-6">
-				<h3>Sarawak Government Commitment</h3>
-				<p class="text-content">Sarawak Chief Minister Datuk Patinggi Abang Johari Openg said today forest restoration is one of the main agenda of the state government from this year onward to enrich the logged-over areas with high value timber species, especially on degraded areas within permanent forest estates.</p>
-				<p class="text-content">“This is to ensure that Sarawak’s forest remains vibrant and its complex eco-system could carry out its natural functions,” he said. He said this will also ensure that the state has sufficient future timber stocking for sustainable production.</p>
-				<p id="citation">Source: Malay Mail, Image: Bernama, Date: 7th March 2019</p>
-				<a class="btn btn-info" href="https://www.malaymail.com/news/malaysia/2019/03/07/forest-restoration-a-major-agenda-for-sarawak-cm-says/1730036" target="_blank">Learn More</a>
+				<div class="col-sm-4 mt-4">
+					<img class="container-fluid" src="{% static 'img/engkabang.png' %}">
+				</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -69,18 +64,18 @@
 	<br>
 
 	<!-- Video -->
-	<div class="container">
-		<h1 class="heading">A Brief Story of Restoration</h1>
-		<p class="text-content text-center">**contoh video</p>
+	<div class="container mt-5 mb-5">
+		<h3 class="mb-4">A Brief Story of Restoration</h3>
 		<div class="embed-responsive embed-responsive-16by9">
 	  		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/watch?v=ZSPkcpGmflE&list=PLk_PXVm7CuOsKvGQv9dcCWaovncOsgRty&index=1&t=159s" allowfullscreen></iframe>
 		</div>
 	</div>
 
 	<!-- Data and planting -->
-	<div class="container">
-		<h1 class="heading">Explore</h1>
-		<div class="row mx-auto">
+	<div class="container mt-5 mb-5">
+		<h3>Explore</h3>
+		<br>
+		<div class="row">
 			<div class="col-sm-6 mb-4">
 				<div class="card">
   					<div class="" style="position: relative; text-align: left;">
@@ -107,7 +102,7 @@
   					<div class="card-body">
    						<h5 class="card-title">Planting Program</h5>
     					<p class="card-text">Forest restoration requires collaboration from everyone</p>
-    					<a href="#" class="btn btn-info">Join Now</a>
+    					<a href="{% url 'planting_index' %}" class="btn btn-info">Join Now</a>
   					</div>
 				</div>
 			</div>
@@ -115,41 +110,35 @@
 	</div>
 
 	<!-- Partnership -->
-	<div class="container">
-		<h1 class="heading">Our Partners</h1>
-		<div class="partnership-container">
-			<br>
-			<div class="col">
-				<p class="text-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. 
-				<div class="row justify-content-center">
-					<img class="img-logo-box" src="{% static 'img/img_logo/sarawakenergy.png' %}" width="151" height="66">
-					<img class="img-logo-box" src="{% static 'img/img_logo/jma.png' %}" width="122" height="36">
-					<img class="img-logo-box" src="{% static 'img/img_logo/gppusaka.png' %}" width="148" height="52">
-					<img class="img-logo-box" src="{% static 'img/img_logo/fujixerox.png' %}" width="128" height="25">
-					<img class="img-logo-box" src="{% static 'img/img_logo/shell.png' %}" width="71" height="66">
-					<img class="img-logo-box" src="{% static 'img/img_logo/taann.png' %}" width="58" height="60">
-					<img class="img-logo-box" src="{% static 'img/img_logo/shinyang.png' %}" width="63" height="67">
-					<img class="img-logo-box" src="{% static 'img/img_logo/rimbunanhijau.png' %}" width="56" height="79">
-					<img class="img-logo-box" src="{% static 'img/img_logo/samling.png' %}" width="88" height="75">
-					<img class="img-logo-box" src="{% static 'img/img_logo/simedarby.png' %}" width="81" height="81">
-					<img class="img-logo-box" src="{% static 'img/img_logo/aeon.png' %}" width="82" height="27">
-					<img class="img-logo-box" src="{% static 'img/img_logo/foressa.jpg' %}" width="85" height="51">
-					<img class="img-logo-box" src="{% static 'img/img_logo/kembara.png' %}" width="80" height="54">
-					<img class="img-logo-box" src="{% static 'img/img_logo/pbsm.png' %}" width="54" height="54">
-				</div>
+	<div class="container mt-5 mb-5">
+		<h3>Our Partners</h3>
+		<br>
+		<p>Partnership between both public and private organizations is crucial to ensure the success of forest restoration. For some organizations, Memorandum of Understanding (MoU) commemorates the partnership. For others, the partnership embodies collaboration for planting programs, data sharing, solving the same issues and having mutual understanding and interest. </p>
+		<div class="col">
+			<div class="row justify-content-left">
+				<img class="img-logo-box" src="{% static 'img/img_logo/sarawakenergy.png' %}" width="151" height="66">
+				<img class="img-logo-box" src="{% static 'img/img_logo/jma.png' %}" width="122" height="36">
+				<img class="img-logo-box" src="{% static 'img/img_logo/gppusaka.png' %}" width="148" height="52">
+				<img class="img-logo-box" src="{% static 'img/img_logo/fujixerox.png' %}" width="128" height="25">
+				<img class="img-logo-box" src="{% static 'img/img_logo/shell.png' %}" width="71" height="66">
+				<img class="img-logo-box" src="{% static 'img/img_logo/taann.png' %}" width="58" height="60">
+				<img class="img-logo-box" src="{% static 'img/img_logo/shinyang.png' %}" width="63" height="67">
+				<img class="img-logo-box" src="{% static 'img/img_logo/rimbunanhijau.png' %}" width="56" height="79">
+				<img class="img-logo-box" src="{% static 'img/img_logo/samling.png' %}" width="88" height="75">
+				<img class="img-logo-box" src="{% static 'img/img_logo/simedarby.png' %}" width="81" height="81">
+				<img class="img-logo-box" src="{% static 'img/img_logo/aeon.png' %}" width="82" height="27">
+				<img class="img-logo-box" src="{% static 'img/img_logo/foressa.jpg' %}" width="85" height="51">
+				<img class="img-logo-box" src="{% static 'img/img_logo/kembara.png' %}" width="80" height="54">
+				<img class="img-logo-box" src="{% static 'img/img_logo/pbsm.png' %}" width="54" height="54">
 			</div>
 		</div>
 	</div>
 
-		<!--Subscription Form -->
-		<!-- Default form subscription -->
+	<!--Subscription Form -->
+	<!-- Default form subscription -->
 	<div class="container">
-		<form class="text-center border border-light p-5" action="#!">
-		    <p class="heading">Stay in touch</p>
+		<form class="text-center border rounded shadow p-5" action="#!">
+		    <h3>Stay in touch</h3>
 		    <p>Join our newsletter to stay updated on our journey.</p>
 		    <!-- Name -->
 		    <div class="row">

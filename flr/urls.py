@@ -25,6 +25,7 @@ urlpatterns = [
     path('ckeditor', include('ckeditor_uploader.urls')),
     path('about/', views.about, name='about'),
     path('organization/', views.organization, name='organization'),
+    path('why_it_matters/', views.why_it_matters, name='why'),
     path('', views.home, name='home'),
     path('membership/', include('django.contrib.auth.urls')),
     path('membership/', include('membership.urls')),

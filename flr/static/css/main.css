@@ -1,10 +1,20 @@
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 body, html {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	height: 100%;
 }
-
-
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Merriweather', serif;
@@ -88,6 +98,12 @@ ul {
 	text-overflow: "";
 }
 
+.gradient-div {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
 
 /* ---- */
 
@@ -149,8 +165,13 @@ ul {
 	font-weight: lighter;
 }
 
+.btn-outline-dark {
+	background-color:#000;
+	color: #fff;
+}
+
 .btn-info {
-	background-color: #031D44;
+	background-color: #000;
 	border: none;
 }
 
