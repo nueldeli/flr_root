@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
+<div class="container-fluid p-0" style="position: relative;">
+	<img class="w-100" src="{% static 'img/about_main_img.png' %}">
+	<div class="carousel-caption mb-4 text-center">
+		<h1>Our Story</h1>
+		<i class="fa fa-angle-down bounce"></i>
+	</div>
+</div>
 
 <div class="container">
-	
 	<div class="content-container">
 		<div class="container-fluid p-4">
-			<h3><strong>Our Story</strong></h3>
 			<br>
 			<h4>Definition by IUCN</h4>
 			<p>International Union for Conservation of Nature (IUCN) defines Forest Landscape Restoration (FLR) as a long-term process to regain ecological functionality and enhance human well-being in deforested or degraded landscapes, in biomes with the natural potential to support trees. It requires integrating with other land uses, delivery of a broader range of societal benefits and a vision for a better managed landscape.</p>
@@ -21,13 +28,12 @@
 			<p>4. Enhance Communication, Education and Pubic Awareness (CEPA);</p>
 			<p>5. Intensity Research and Development;</p>
 			<p>6. Collaboration with other relevant stakeholders & engagement with local communities</p>
-			<br>
-			<h4>Our Goals</h4>
-			<p>1. Regain ecological functionality of forest in Sarawak;</p>
-			<p>2. Enhance human well-being and livelihood of forest-dependent communities;</p>
-			<p>3. Re-establish the structure, productivity, and species diversity of forest;</p>
-			<p>4. Ensure sufficient future timber stocking for sustainable forest management;</p>
 		</div>
+	</div>
+
+	<!--Timeline-->
+	<div class="mb-4">
+		<h4></h4>
 	</div>
 </div>
 

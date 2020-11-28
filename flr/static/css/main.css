@@ -10,6 +10,18 @@
 	}
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 body, html {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -251,26 +263,23 @@ ul {
 	color: #000;
 }
 
-.fa {
+/*.fa {
 	padding: 20px;
 	font-size: 30px;
 	text-align: center;
 	text-decoration: none;
 	
-}
-
-.fa:hover {
-	color: #fff;
-	opacity: 0.7;
-	text-decoration: none;
-}
+}*/
 
 .fa-facebook {
   color: white;
+  font-size: 30px;
+  margin-right: 30px;
 }
 
 .fa-instagram {
   color: white;
+  font-size: 30px;
 }
 
 .fa-phone {
@@ -309,4 +318,17 @@ ul {
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.fa-angle-down {
+	font-size: 60px;
+	padding: 0;
+	position: absolute;
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+
 }
