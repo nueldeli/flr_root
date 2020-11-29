@@ -157,6 +157,11 @@ ul {
 	line-height: 1em
 }
 
+.carousel-caption {
+	top: 40%;
+	transform: translateY(-60%);
+}
+
 .update-box-1 {
 	flex: 1;
 	margin: 20px;
@@ -322,8 +327,6 @@ ul {
 
 .fa-angle-down {
 	font-size: 60px;
-	padding: 0;
-	position: absolute;
 }
 
 .bounce {

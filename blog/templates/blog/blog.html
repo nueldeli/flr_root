@@ -1,29 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="container">
-		<h1 class="heading h1-responsive">Latest Stories</h1>
-		<div class="text-center">
-		{% if user.is_authenticated %}
-			<a href="{% url 'add_post' %}"><button class="btn btn-info">Add Post</button></a>
-		{% endif %}
-	</div>
+<div class="container align-items-center mt-4">
+	<h3 class="font-weight-bold pt-4 pb-4">Latest Stories</h3>
 	<div class="row">
 		{% for post in object_list %}
-		<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
-			<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="{{ post.get_thumbnail }}" height="200">
-					<div class="card-body">
-						<h5>{{ post.title }}</h5>
-						<p class="text-muted">{{ post.author.first_name }} {{ post.author.last_name }}</p>
-					</div>
-					<div class="card-body d-flex align-items-end">
-						<a href="{% url 'blog_post' post.pk %}"><button type="button" class="btn btn-info">Read More</button></a>
-					</div>
-					<div class="card-footer">
-						<small class="text-muted">{{ post.date_created }}</small>
-					</div>
-			</div>
+		<div class="col-sm-3">
+			<!--square img eg 340 x 340 (px)-->
+			<img class="w-100 mb-4" src="{{ post.get_thumbnail }}">
+			<a class="text-dark" href="{% url 'blog_post' post.pk %}"><h6 class="text-left"><strong>{{ post.title }}</strong></h6></a>
+			<p class="text-muted">{{ post.author.first_name }} {{ post.author.last_name }}</p>
+			<small class="text-muted">{{ post.date_created }}</small>
 		</div>
 		{% endfor %}
 	</div>
