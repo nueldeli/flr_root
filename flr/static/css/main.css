@@ -111,11 +111,12 @@ ul {
 }
 
 .gradient-div {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-color: #7fcec5;
+	background: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+	/*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
-
 
 /* ---- */
 
@@ -303,7 +304,6 @@ ul {
 }
 
 .grey-text {
-	
 	color: #000;
 	font-size: 16px;
 	text-align: justify;
@@ -335,3 +335,26 @@ ul {
   animation: bounce 2s infinite;
 
 }
+
+.thead-custom {
+	background-color: #000;
+	color: #fff;
+}
+
+.team-container {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.team-text {
+	font-family: Helvetica;
+	font-size: 20px;
+	align-items: center;
+}
+
+.df {
+	color: #fff;
+}
+

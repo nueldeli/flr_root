@@ -2,40 +2,34 @@
 
 {% block content %}
 
-<div class="content-container container" style="min-height: 100%">
+<div class="content-container container">
 
-	<br>
-
-	<div class="border rounded">
+	<div class="border rounded shadow mt-4">
 		<div class="m-4">
-			<h3>Sabal FLR Centre</h3>
-			<p><strong>Total of species:</strong> {{ sabal_count }}</p>
-			<p><strong>Family:</strong> Dipterocarps, Non-dipterocarps, NTFP</p>
-			<p><strong>Total Area:</strong> 100 ha</p>
+			<h4>Sabal FLR Centre</h4>
+			<p>Total of species: {{ sabal_count }}</p>
+			<p>Family: Dipterocarps, Non-dipterocarps, NTFP</p>
+			<p>Total Area: 100 ha</p>
 			<a class="btn btn-info" href="{% url 'sabal_species' %}">View species</a>
 		</div>
 	</div>
 
-	<br>
-
-	<div class="border rounded">
+	<div class="border rounded shadow mt-4">
 		<div class="m-4">
-			<h3>Niah Forest Research Station</h3>
-			<p><strong>Total of species:</strong> {{ niah_count }}</p>
-			<p><strong>Family:</strong> Dipterocarps, Non-dipterocarps, NTFP</p>
-			<p><strong>Total Area:</strong> 100 ha</p>
+			<h4>Niah Forest Research Station</h4>
+			<p>Total of species: {{ niah_count }}</p>
+			<p>Family: Dipterocarps, Non-dipterocarps, NTFP</p>
+			<p>Total Area: 100 ha</p>
 			<a class="btn btn-info" href="{% url 'niah_species' %}">View species</a>
 		</div>
 	</div>
 
-	<br>
-
-	<div class="border rounded">
+	<div class="border rounded shadow mt-4">
 		<div class="m-4">
-			<h3>IFRC Semenggoh</h3>
-			<p><strong>Total of species:</strong> {{ semenggoh_count }}</p>
-			<p><strong>Family:</strong> Dipterocarps, Non-dipterocarps, NTFP</p>
-			<p><strong>Total Area:</strong> 100 ha</p>
+			<h4>IFRC Semenggoh</h4>
+			<p>Total of species: {{ semenggoh_count }}</p>
+			<p>Family: Dipterocarps, Non-dipterocarps, NTFP</p>
+			<p>Total Area: 100 ha</p>
 			<a class="btn btn-info" href="{% url 'semenggoh_species' %}">View species</a>
 		</div>
 	</div>

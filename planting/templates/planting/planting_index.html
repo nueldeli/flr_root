@@ -1,21 +1,18 @@
 {% extends 'base.html' %}
 
-{% load static %}
-
 {% block content %}
 
-<div class="container">
-	<h1 class="heading">Planting</h1>
+<div class="container h-100">
 
-	<div class="border rounded">
+	<div class="border rounded shadow mt-4">
 		<div class="m-4">
 			<h3>Planting Programmes</h3>
 			<p>You can view all the planting programmes that have been held througout Sarawak. </p>
 			<a href="{% url 'planting_view_programme' %}" class="btn btn-info">View programme</a>
 		</div>
 	</div>
-	<br>
-	<div class="border rounded">
+
+	<div class="border rounded shadow mt-4">
 		<div class="m-4">
 			<h3>Join Programme</h3>
 			<p>You can participate in our planting programmes by register and selecting the species that you want. </p>
@@ -24,5 +21,4 @@
 	</div>
 </div>
 
-	<!--<img class="container-fluid" src="{% static 'img/planting_img.png' %}">-->
 {% endblock %}

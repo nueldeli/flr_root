@@ -11,21 +11,41 @@
 		{% endif %}
 	</div>
 	<div class="border rounded p-4 mt-4">
-		<p class="text-content">Planting trees has never been easier. Now, anybody can join the restoration quest. It's just a few clicks away.</p>
-		<p class="text-content"><strong>Step 1:</strong> Register your details. If you already registered, proceed the second step.</p>
-		<p class="text-content"><strong>Step 2:</strong> Select the trees that you want to plant from the available catalogue below. The selected trees will be automatically listed into cart. You can check your dash board (top right) to view.</p>
-		<p class="text-content"><strong>Step 3:</strong> Go to dashboard and check your list. Click 'Submit' to complete your application. </p>
+		<p>Planting trees has never been easier. Now, anybody can join the restoration quest. It's just a few clicks away.</p>
+		<p><strong>Step 1:</strong> Register your details. If you already registered, proceed the second step.</p>
+		<p><strong>Step 2:</strong> Select the trees that you want to plant from the available catalogue below. The selected trees will be automatically listed into cart. You can check your dash board (top right) to view.</p>
+		<p><strong>Step 3:</strong> Go to dashboard and check your list. Click 'Submit' to complete your application. </p>
 	</div>
 	<div class="text-center m-4">
 		<p><i class="arrow down"></i></p>
 	</div>
+
 	<h5 class="text-center">Select from this catalogue</h5>
 	<div class="view overlay text-center">
-		<a class="btn btn-primary" href="{% url 'planting_cart' %}">View your cart</a>
+		<a class="btn btn-info" href="{% url 'planting_cart' %}">View your cart</a>
 	</div>
 
+	<br>
+
+	<div class="row my-4">
+		{% for species in object_list %}
+		<div class="col-sm-3 mb-3">
+			<div class="border rounded">
+				<img class="w-100 mb-3" src="{{ species.get_cart_img }}">
+				<ul class="list-unstyled px-3">
+				    <li>{{ species.cart_local_name }}</li>
+				    <li><i>{{ species.cart_scientific_name }}</i></li>
+				    <div class="row p-3">
+			    		<a data-species='{{ species.id }}' data-action='add' class="col btn btn-info update-cart" href="#" role='button'>Add</a>
+			    		<a class="col btn btn-primary ml-4" href="{% url 'cart_species_view' species.pk %}" role='button'>View</a>
+					</div>
+				</ul>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 	<!-- Tree List  Catalogue-->
-	<div class="row">
+	<!--<div class="row">
 		{% for species in object_list %}
 		<div class="col-sm d-flex justify-content-center" style="margin: 20px;">
 			<div class="card" style="width: 18rem;">
@@ -43,7 +63,7 @@
 			</div>
 		</div>
 		{% endfor %}
-	</div>
+	</div>-->
 </div>
 
 {% endblock %}

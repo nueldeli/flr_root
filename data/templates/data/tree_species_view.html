@@ -21,7 +21,7 @@
 			<p><strong>Nursery: </strong>{{ object.nursery }}</p>
 			<p><strong>Remarks: </strong>{{ object.remarks }}</p>
 			<div class="row">
-				<p class="col"><a class="btn btn-info" href="{% url 'tree_species' %}">Back</a></p>
+				<p class="col"><a class="btn btn-primary" href="{% url 'tree_species' %}">Back</a></p>
 				{% if user.is_authenticated %}
 					<p class="col"><a class="btn btn-info" href="{% url 'update_tree' object.pk %}">Edit</a></p>
 					<p class="col"><a class="btn btn-danger" href="{% url 'delete_tree' object.pk %}">Delete</a></p>

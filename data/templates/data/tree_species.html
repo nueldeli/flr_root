@@ -7,14 +7,14 @@
 	<div class="row">
 		<h4 class="col">Species</h4>
 		{% if user.is_authenticated %}
-			<a class="col" href="{% url 'add_tree' %}"><button type="button" class="btn btn-info">Add Tree</button></a>
+			<a class="col" href="{% url 'add_tree' %}"><button type="button" class="btn btn-info">Add Species</button></a>
 		{% endif %}
-		<p><a href="{% url 'data' %}">Back</a></p>
+		<a class="btn btn-primary" href="{% url 'data' %}">Back</a>
 	</div>
 	<br>
 	<div class="table-responsive">
 		<table class="table">
-			<thead class="thead-dark">
+			<thead class="thead-custom">
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Local Name</th>

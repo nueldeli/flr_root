@@ -4,15 +4,45 @@
 
 {% block content %}
 
-<div class="container">
-	<h3 class="text-center m-4 font-weight-bold">Our Team</h3>
-	<div class="row">
-		<div class="col-sm-6 mt-4 text-center">
-			<img src="{% static 'img/df.png' %}">
+<div class="team-container">
+	<h3 class="my-4 font-weight-bold">Our Team</h3>
+	<div class="row border rounded shadow gradient-div df">
+		<div class="col-sm-6 mt-4 p-0 text-left">
+			<img  src="{% static 'img/df.png' %}">
 		</div>
 		<div class="col-sm-6 p-4">
-			<h4>Datu Hamden bin Haji Mohammad</h4>
-			<p>Chairman</p>
+			<h3>Datu Hamden bin Haji Mohammad</h3>
+			<p class="team-text">Chairman</p>
+		</div>
+	</div>
+	<div class="row border rounded shadow mt-4 text-right gradient-div df">
+		<div class="col-sm-6 p-4">
+			<h3>Jack Liam</h3>
+			<p class="team-text">Co-chairman</p>
+		</div>
+		<div class="col-sm-6 mt-4 p-0 text-right">
+			<img src="{% static 'img/ddf.png' %}">
+		</div>
+	</div>
+	<div class="row border rounded shadow mt-4 text-right gradient-div df">
+		<div class="col-sm-6 p-4">
+			<h3>Zarina Haji Shebli</h3>
+			<p class="team-text">Secretariat</p>
+		</div>
+		<div class="col-sm-6 mt-4 p-0 text-right">
+			<img src="{% static 'img/rifd.png' %}">
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="mx-auto">
+				<!--Image goes here -->
+			</div>
+			<h4>Division</h4>
+			<p>Functions</p>
 		</div>
 	</div>
 </div>
