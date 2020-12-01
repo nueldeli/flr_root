@@ -351,10 +351,11 @@ ul {
 .team-text {
 	font-family: Helvetica;
 	font-size: 20px;
-	align-items: center;
 }
 
-.df {
-	color: #fff;
+.team-background {
+	background-image: url('/static/img/team-background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
