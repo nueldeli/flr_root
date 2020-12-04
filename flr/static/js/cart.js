@@ -18,7 +18,7 @@ for(var i=0; i < updateBtns.length; i++){
 function updateUserOrder(speciesId, action){
 	console.log('User is authenticated, sending data...')
 
-	var url = '/update_item/'
+	var url = 'api/update_item/'
 
 	fetch(url, {
 		method:'POST',
